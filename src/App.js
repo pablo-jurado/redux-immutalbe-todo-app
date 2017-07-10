@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
-import {Todo, TodoList} from './components'
+import { TodoList } from './components'
+import { List, Map } from 'immutable'
 import './App.css'
 
 const dummyTodos = [

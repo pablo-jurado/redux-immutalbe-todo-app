@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Todo(todo) {
+export function Todo (todo) {
   if (todo.isDone) return <srtike>{todo.text}</srtike>
   return <span>{todo.text}</span>
 }
