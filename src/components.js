@@ -1,8 +1,15 @@
 import React from 'react'
+import { List, Map } from 'immutable'
 
-export function Todo (todo) {
-  if (todo.isDone) return <srtike>{todo.text}</srtike>
-  return <span>{todo.text}</span>
+
+export function Todo (props) {
+  const { todo } = props
+
+  if (todo.isDone) {
+    return <strike>{todo.text}</strike>
+  } else {
+    return <span>{todo.text}</span>
+  }
 }
 
 export function TodoList (props) {
