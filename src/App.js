@@ -2,7 +2,11 @@ import React from 'react'
 import logo from './logo.svg'
 import { TodoList } from './components'
 import { List, Map } from 'immutable'
+import reducer from './reducer'
+import { createStore } from 'redux'
 import './App.css'
+
+const store = createStore(reducer)
 
 const dummyTodos = [
   { id: 0, isDone: true, text: 'make components' },
@@ -24,7 +28,7 @@ function App () {
   return (
     <div className='App'>
       {Header()}
-      {TodoList(dummyTodos)}
+      {<TodoList todos={store.getState()} />}
     </div>
   )
 }
